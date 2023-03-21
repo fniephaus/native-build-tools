@@ -37,6 +37,7 @@ jobs:
       - uses: ./.github/actions/prepare-environment
         with:
           graalvm-version: ${{ matrix.graalvm-version }}
+          gds-token: ${{ secrets.GDS_TOKEN }}
           java-version: ${{ matrix.java-version }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: "❓ Check and test the plugin"
